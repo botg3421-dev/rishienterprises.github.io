@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishi Enterprises - PAN Card | Voter ID | CSC Point | Powai Mumbai</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        header {
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .tagline { font-size: 1.2em; opacity: 0.95; }
+
+        /* Hero */
+        .hero {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .hero h1 {
+            color: #1e3c72;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .hero-icon { font-size: 4em; color: #ff6b6b; margin-bottom: 20px; }
+
+        /* Category Headers */
+        .category-header {
+            text-align: center;
+            margin: 60px 0 30px 0;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 15px;
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Services Grid - Individual Boxes */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .service-box {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid #ff6b6b;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        .service-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #feca57);
+        }
+        .service-icon { 
+            font-size: 2.2em; 
+            color: #1e3c72; 
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .service-title { 
+            color: #1e3c72; 
+            font-size: 1.4em; 
+            font-weight: bold;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .requirements {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+        .requirements strong { color: #1e3c72; }
+        .time-badge {
+            display: inline-block;
+            background: #d4edda;
+            color: #155724;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 0;
+            margin: 50px 0;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .contact h2 { font-size: 2.5em; margin-bottom: 20px; }
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .info-item {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        .info-icon { font-size: 2em; margin-bottom: 10px; }
+        .phone, .whatsapp { color: #25D366; }
+        .email { color: #ff6b6b; }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(37,211,102,0.4);
+        }
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(37,211,102,0.6);
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1, .contact h2, .category-header { font-size: 1.8em; }
+            .services-grid { grid-template-columns: 1fr; }
+            .logo { font-size: 2em; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">🆔 RISHI ENTERPRISES</div>
+            <div class="tagline">CSC Point | PAN Card | Voter ID | Online Services | Powai Mumbai</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-icon">
+                <i class="fas fa-id-card"></i>
+            </div>
+            <h1>Fast & Reliable PAN Card & Voter ID Services</h1>
+            <p style="font-size: 1.3em; color: #666; max-width: 600px; margin: 0 auto;">
+                Opposite Tunga Medical, Tunga Village, Saki Vihar Road, Powai, Mumbai - 400072
+            </p>
+        </section>
+
+        <!-- EXPRESS ONLINE PAN (4-5 DAYS) -->
+        <h2 class="category-header">⚡ EXPRESS ONLINE PAN <span style="font-size: 0.6em;">(4-5 DAYS)</span></h2>
+        <div class="services-grid">
+            <div class="service-box">
+                <div class="service-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                <h3 class="service-title">New PAN Card (With Physical Card)</h3>
+                <div class="requirements">
+                    <strong>Required:</strong> Aadhaar OR (Birth/School Cert/Voter ID)
+                </div>
+                <div class="time-badge">⏱️ 4-5 Days (Online)</div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon"><i class="fas fa-download"></i></div>
+                <h3 class="service-title">Digital PAN (Xerox/Soft Copy Only)</h3>
+                <div class="requirements">
+                    <strong>Required:</strong> Aadhaar OR (Birth/School Cert/Voter ID)
+                </div>
+                <div class="time-badge">⏱️ 4-5 Days (Online)</div>
+            </div>
+        </div>
+
+        <!-- STANDARD PAN SERVICES (20-25 DAYS) -->
+        <h2 class="category-header">📋 STANDARD PAN SERVICES <span style="font-size: 0.6em;">(20-25 DAYS)</span></h2>
+        <div class="services-grid">
+            <div class="service-box">
+                <div class="service-icon"><i class="fas fa-check-circle"></i></div>
+                <h3 class="service-title">Application With Proof</h3>
+                <div class="requirements">
+                    <strong>Required:</strong> Aadhaar OR (Birth/School Cert/Voter ID)
+                </div>
+                <div class="time-badge">⏱️ 20-25 Days</div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon"><i class="fas fa-id-card"></i></div>
+                <h3 class="service-title">Application (Aadhaar Card Only)</h3>
+                <div class="requirements">
+                    <strong>Required:</strong> Aadhaar Card Only
+                </div>
+                <div class="time-badge">⏱️ 20-25 Days</div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon"><i class="fas fa-gem"></i></div>
+                <h3 class="service-title">Aadhaar + Voter ID Combo</h3>
+                <div class="requirements">
+                    <strong>Combo Package:</strong><br>
+                    20 Days for Voter ID + 20 Days for PAN Card
+                </div>
+                <div class="time-badge">⏱️ 40 Days Total</div>
+            </div>
+        </div>
+
+        <!-- VOTER ID SERVICES (15-20 DAYS) -->
+        <h2 class="category-header">🗳️ VOTER ID SERVICES <span style="font-size: 0.6em;">(15-20 DAYS)</span></h2>
+        <div class="services-grid">
+            <div class="service-box">
+                <div class="service-icon"><i class="fas fa-vote-yea"></i></div>
+                <h3 class="service-title">New Voter ID Card (With Card)</h3>
+                <div class="time-badge">⏱️ 15-20 Days</div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-icon"><i class="fas fa-edit"></i></div>
+                <h3 class="service-title">Voter ID Update (Without Card)</h3>
+                <div class="time-badge">⏱️ 15-20 Days</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2><i class="fas fa-phone"></i> Contact Us Now!</h2>
+            <div class="contact-info">
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <div><strong>📞 Call:</strong></div>
+                    <div>9987950109 | 9146026569</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="whatsapp"><strong>💬 WhatsApp:</strong></div>
+                    <div>9987950109 | 9146026569 | 7738148735</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="email"><strong>✉️ Email:</strong></div>
+                    <div>botg347@gmail.com</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div><strong>📍 Address:</strong></div>
+                    <div>Opp. Tunga Medical, Tunga Village,<br>Saki Vihar Road, Powai,<br>Mumbai - 400072</div>
+                </div>
+            </div>
+            <a href="https://wa.me/919987950109?text=Hi!%20I%20want%20PAN%20Card/Voter%20ID%20service%20from%20Rishi%20Enterprises" 
+               class="whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp Now
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Rishi Enterprises | CSC Point | Fast PAN & Voter ID Services | Powai Mumbai</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling & animations
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // WhatsApp button animation
+        document.querySelector('.whatsapp-btn').addEventListener('click', function() {
+            this.innerHTML = '<i class="fab fa-whatsapp"></i> Sending...';
+            setTimeout(() => {
+                this.innerHTML = '<i class="fab fa-whatsapp"></i> Chat on WhatsApp Now';
+            }, 1500);
+        });
+    </script>
+<div style="margin-top:20px;">
+  <h2>📍 Visit Us</h2>
+
+  <iframe 
+    src="https://www.google.com/maps?q=19.1193529,72.891707&hl=es;z=14&output=embed"
+    width="100%" 
+    height="300" 
+    style="border:0; border-radius:10px;" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+
+  <br><br>
+
+  <a href="https://www.google.com/maps/place/Rishi+Enterprises/@19.1193529,72.891707" target="_blank">
+    👉 Open in Google Maps
+<p>Shop Address: Rishi Enterprises, Powai, Mumbai</p>
+  </a>
+</div>
+</body>
+</html>
